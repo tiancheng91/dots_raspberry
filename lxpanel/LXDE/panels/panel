@@ -3,7 +3,7 @@
 
 Global {
   edge=bottom
-  allign=left
+  align=left
   margin=0
   widthtype=percent
   width=100
@@ -13,10 +13,10 @@ Global {
   alpha=0
   setdocktype=1
   setpartialstrut=1
+  autohide=0
+  heightwhenhidden=0
   usefontcolor=1
   fontcolor=#ffffff
-  usefontsize=0
-  fontsize=10
   background=0
   backgroundfile=/usr/share/lxpanel/images/background.png
 }
@@ -29,7 +29,7 @@ Plugin {
 Plugin {
   type=menu
   Config {
-    image=/usr/share/lxpanel/images/my-computer.png
+    image=/usr/share/lxde/images/lxde-icon.png
     system {
     }
     separator {
@@ -54,9 +54,6 @@ Plugin {
     Button {
       id=lxde-x-www-browser.desktop
     }
-    Button {
-      id=rxvt-unicode.desktop
-    }
   }
 }
 Plugin {
@@ -64,13 +61,29 @@ Plugin {
   Config {
     Size=4
   }
-  expand=0
 }
 Plugin {
   type=wincmd
   Config {
     Button1=iconify
     Button2=shade
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=4
+  }
+}
+Plugin {
+  type=pager
+  Config {
+  }
+}
+Plugin {
+  type=space
+  Config {
+    Size=4
   }
 }
 Plugin {
@@ -83,7 +96,7 @@ Plugin {
     ShowIconified=1
     ShowMapped=1
     ShowAllDesks=0
-    UseMouseWheel=0
+    UseMouseWheel=1
     UseUrgencyHint=1
     FlatButton=0
     MaxTaskWidth=150
@@ -96,20 +109,16 @@ Plugin {
   }
 }
 Plugin {
-  type=tray
+  type=volume
   Config {
+    VolumeMuteKey=XF86AudioMute
+    VolumeDownKey=XF86AudioLowerVolume
+    VolumeUpKey=XF86AudioRaiseVolume
   }
 }
 Plugin {
-  type=thermal
+  type=tray
   Config {
-    NormalColor=#00ff00
-    Warning1Color=#fff000
-    Warning2Color=#ff0000
-    AutomaticLevels=1
-    Warning1Temp=140
-    Warning2Temp=145
-    AutomaticSensor=1
   }
 }
 Plugin {
@@ -123,7 +132,13 @@ Plugin {
   }
 }
 Plugin {
-  type=wincmd
+  type=launchbar
   Config {
+    Button {
+      id=lxde-screenlock.desktop
+    }
+    Button {
+      id=lxde-logout.desktop
+    }
   }
 }

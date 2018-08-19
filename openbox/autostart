@@ -1,6 +1,7 @@
 feh --bg-fill ~/.config/openbox/wallpaper.jpg
 # blueman-applet &
+gost -L=:18081 -F=mwss://wss.buf.bid:8443 &
 scim &
 lxpanel &
 xsettingsd &
-
+xset dpms 0 0 900
